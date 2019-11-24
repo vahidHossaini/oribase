@@ -1,0 +1,23 @@
+{
+  "name": "oribase",
+  "version": "0.0.7",
+  "description": "origamicore base class",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vahidHossaini/oribase.git"
+  },
+  "keywords": [
+    "origamicore",
+    "base"
+  ],
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/vahidHossaini/oribase/issues"
+  },
+  "homepage": "https://github.com/vahidHossaini/oribase#readme"
+}
