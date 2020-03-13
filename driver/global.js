@@ -24,6 +24,19 @@ module.exports = class globalClass
                 str='1'+str
             return parseInt(str)
         }
+		global.ori.RandomText=function(n=5)
+        {
+            var str=''
+            var sr='qwertyuiopasdfghjklzxcvbnm'
+            for(var a=0;a<n;a++)
+            {
+                var i=global.ori.Random(0,sr.length-1)
+                str+=sr[i]
+            }
+            if(str[0]=='0')
+                str='1'+str
+            return parseInt(str)
+        }
         String.prototype.replaceAll = function(search, replacement) {
           var target = this;
           return target.replace(new RegExp(search, 'g'), replacement);

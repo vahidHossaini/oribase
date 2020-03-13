@@ -1,4 +1,5 @@
 var request = require('request');
+var querystring = require('querystring');
 module.exports = class web
 {
     constructor()
@@ -103,6 +104,52 @@ module.exports = class web
                
             })
         }        
+    }
+    postForm(url,data,header,func)  
+    {
+        
+        var formData = querystring.stringify(data);
+        var contentLength = formData.length;
+        var headers= {
+              'Content-Length': contentLength,
+              'Content-Type': 'application/x-www-form-urlencoded'
+            }
+        if(header)
+            for(var a in header)
+                 headers[a]=header[a]
+        console.log('post------------>',headers)     
+        if(func)
+        { 
+          request({
+            headers:headers,
+            uri: url,
+            body: formData,
+            method: 'POST'
+          }, function (err, res, body) {
+            //it works!
+                func(err,body)
+          });
+                       
+        }
+        else
+        { 
+            return new Promise(function (resolve, reject) {
+                
+                  request({
+                    headers:headers,
+                    uri: url,
+                    body: formData,
+                    method: 'POST'
+                  }, function (err, res, body) {
+                    //it works!
+                    if (err) return reject(err);
+                  
+                    return resolve(body)
+                  }); 
+               
+            })
+        }        
+           
     }
     post(url,data,header,func)    
     {

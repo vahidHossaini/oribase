@@ -6,7 +6,17 @@ module.exports = class defaultConfig
     }
     getPackages()
     {
-       return [{name:"uuid"}]
+       var l= [{name:"uuid"}]
+       if(this.config.drivers)
+            for(var a of this.config.drivers)
+            {
+                if(a.name=="web")
+                {
+                    l.push({name:'request'})
+                    l.push({name:'querystring'})
+                }
+            }
+       return l;
     }
     getMessage()
 	{

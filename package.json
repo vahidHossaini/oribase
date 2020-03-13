@@ -1,6 +1,6 @@
 {
   "name": "oribase",
-  "version": "0.0.7",
+  "version": "0.0.10",
   "description": "origamicore base class",
   "main": "index.js",
   "scripts": {
