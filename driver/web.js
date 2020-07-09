@@ -21,7 +21,7 @@ module.exports = class web
             url: url, 
             json: true };
         if(header)
-            options.header=header;
+            options.headers=header;
         if(func)
         {
             request(options, function (error, response, body) {
@@ -55,7 +55,7 @@ module.exports = class web
             url: url, 
             json: true };
         if(header)
-            options.header=header;
+            options.headers=header;
         if(func)
         {
             request(options, function (error, response, body) {
@@ -81,7 +81,7 @@ module.exports = class web
             body:data,
             json: true };
         if(header)
-            options.header=header;
+            options.headers=header;
             //console.log(options)
         if(func)
         {
@@ -158,7 +158,7 @@ module.exports = class web
             body:data,
             json: true };
         if(header)
-            options.header=header;
+            options.headers=header;
             //console.log(options)
         if(func)
         {

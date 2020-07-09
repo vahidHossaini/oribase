@@ -1,8 +1,9 @@
+# Description
+This moudule is common function
 
-
-#Install
+# Install
 - origamicore [Doc](https://github.com/vahidHossaini/origami#readme)
-#Config	
+# Config	
 
 	   {
     		drivers:
@@ -12,7 +13,7 @@
     		]
 	   }
 	
-	
+# Services	
 		global.web
 			.get(url,func)
 			.post(url,data,func) 
